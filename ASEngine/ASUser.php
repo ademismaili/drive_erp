@@ -334,16 +334,6 @@ class ASUser
         respond(['status' => 'success']);
     }
 
-    /**
-     * Delete user, all his comments and connected social accounts.
-     */
-    public function deleteUser(int $userId): void
-    {
-        $this->db->delete("as_users", "user_id = :id", ["id" => $userId]);
-        $this->db->delete("as_user_details", "user_id = :id", ["id" => $userId]);
-        $this->db->delete("as_comments", "posted_by = :id", ["id" => $userId]);
-        $this->db->delete("as_social_logins", "user_id = :id", ["id" => $userId]);
-    }
 
     /**
      * Validate data provided during user update
