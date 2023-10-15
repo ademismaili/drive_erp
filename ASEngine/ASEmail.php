@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 /**
- * Advanced Security - PHP Register/Login System
+ * Drive ERP
  *
- * @author Milos Stojanovic
+ * @author Adem Ismaili
  * @link   http://mstojanovic.net
  */
 

@@ -2,10 +2,6 @@
     <img src="assets/img/flags/en.png" alt="English" title="English"
          class="<?= ASLang::getLanguage() == 'en' ? 'active' : ''; ?>" />
 </a>
-<a href="<?= ASLang::langUrl('sr') ?>" class="me-1">
-    <img src="assets/img/flags/sr.png" alt="Serbian" title="Serbian (cyrillic)"
-         class="<?= ASLang::getLanguage() == 'sr' ? 'active' : ''; ?>" />
-</a>
 <a href="<?= ASLang::langUrl('ru') ?>" class="me-1">
     <img src="assets/img/flags/ru.png" alt="Russian" title="Russian"
          class="<?= ASLang::getLanguage() == 'ru' ? 'active' : ''; ?>" />

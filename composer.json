@@ -1,6 +1,6 @@
 {
-    "name": "loshmis/advanced-security",
-    "description": "Advanced Security - PHP Register/Login System",
+    "name": "ademismaili/erp_drive",
+    "description": "Drive ERP",
     "keywords": ["advanced", "secure", "login", "user management", "login system"],
     "type": "project",
     "require": {

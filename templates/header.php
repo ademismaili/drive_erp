@@ -13,7 +13,7 @@ $currentUser = app('current_user');
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Milos Stojanovic (@loshmis)">
+        <meta name="author" content="Adem Ismaili">
 
         <title><?= trans('home') ?> | <?= WEBSITE_NAME ?></title>
 
