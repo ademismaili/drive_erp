@@ -16,14 +16,6 @@ CREATE TABLE IF NOT EXISTS `as_users` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `as_social_logins` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `user_id` int(11) NOT NULL,
-    `provider` varchar(50) DEFAULT 'email',
-    `provider_id` varchar(250) DEFAULT NULL,
-    `created_at` datetime,
-    PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `as_login_attempts` (
   `id_login_attempts` int(11) NOT NULL AUTO_INCREMENT,

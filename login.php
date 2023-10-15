@@ -6,8 +6,6 @@ if (app('login')->isLoggedIn()) {
     redirect('index.php');
 }
 
-$token = app('register')->socialToken();
-ASSession::set('as_social_token', $token);
 app('register')->botProtection();
 ?>
 <!doctype html>
@@ -173,30 +171,6 @@ app('register')->botProtection();
                                     <?= trans('or_connect_with') ?>
                                 </small>
 
-                                <!-- start: Social Login Buttons -->
-                                <div class="text-center d-flex justify-content-around mt-3 col-md-6 mx-auto">
-                                    <?php if (FACEBOOK_ENABLED) : ?>
-                                        <a href="socialauth.php?p=facebook&token=<?= $token ?>"
-                                           class="btn-social btn-facebook">
-                                            <i class="fab fa-facebook-square fa-2x"></i>
-                                        </a>
-                                    <?php endif; ?>
-
-                                    <?php if (TWITTER_ENABLED) : ?>
-                                        <a href="socialauth.php?p=twitter&token=<?= $token ?>"
-                                           class="btn-social btn-twitter">
-                                            <i class="fab fa-twitter-square fa-2x"></i>
-                                        </a>
-                                    <?php endif; ?>
-
-                                    <?php if (GOOGLE_ENABLED) : ?>
-                                        <a href="socialauth.php?p=google&token=<?= $token ?>"
-                                           class="btn-social btn-google">
-                                            <i class="fab fa-google fa-2x"></i>
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
-                                <!-- end: Social Login Buttons -->
                             <?php endif; ?>
                         </div>
                     </div>

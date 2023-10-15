@@ -118,60 +118,6 @@ class ASRegister
     }
 
 
-    /**
-     * Check if user has already logged in via specific provider and return user's data if he does.
-     *
-     * @param $provider string oAuth provider (Facebook, Twitter or Gmail)
-     * @param $id string Identifier provided by provider
-     * @return array|mixed User info if user has already logged in via specific provider, empty array otherwise.
-     */
-    public function getBySocial(string $provider, string $id): array
-    {
-        $result = $this->db->select(
-            'SELECT as_users.*
-            FROM as_social_logins, as_users 
-            WHERE as_social_logins.provider = :p AND as_social_logins.provider_id = :id
-            AND as_users.user_id = as_social_logins.user_id',
-            ['p' => $provider, 'id' => $id]
-        );
-
-        if ($result !== []) {
-            return $result[0];
-        }
-
-        return $result;
-    }
-
-    /**
-     * Check if user is already registered via some social network.
-     *
-     * @param $provider string Name of the provider ( twitter, facebook or google )
-     * @param $id string Provider identifier
-     * @return bool TRUE if user exist in database (already registred), FALSE otherwise
-     */
-    public function registeredViaSocial(string $provider, string $id): bool
-    {
-        $result = $this->getBySocial($provider, $id);
-
-        return count($result) !== 0;
-    }
-
-    /**
-     * Connect user's social account with his account at this system.
-     *
-     * @param $userId int User ID on this system
-     * @param $provider string oAuth provider (Facebook, Twitter or Gmail)
-     * @param $providerId string Identifier provided by provider.
-     */
-    public function addSocialAccount(int $userId, string $provider, string $providerId)
-    {
-        $this->db->insert('as_social_logins', [
-            'user_id' => $userId,
-            'provider' => $provider,
-            'provider_id' => $providerId,
-            'created_at' => date('Y-m-d H:i:s')
-        ]);
-    }
 
     /**
      * Send forgot password email.
@@ -374,16 +320,6 @@ class ASRegister
         return str_random($length);
     }
 
-    /**
-     * Generate random token that will be used for social authentication
-     *
-     * @return string Generated token.
-     * @throws \Exception
-     */
-    public function socialToken(): string
-    {
-        return str_random(40);
-    }
 
     /**
      * Generate key used for confirmation and password reset.
