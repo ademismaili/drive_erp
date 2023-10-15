@@ -4,7 +4,6 @@
  * Drive ERP
  *
  * @author Adem Ismaili
- * @link   http://mstojanovic.net
  */
 
 class ASResponse

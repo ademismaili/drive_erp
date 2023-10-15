@@ -6,7 +6,6 @@ use PHPMailer\PHPMailer\PHPMailer;
  * Drive ERP
  *
  * @author Adem Ismaili
- * @link   http://mstojanovic.net
  */
 
 
