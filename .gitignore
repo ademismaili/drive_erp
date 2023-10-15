@@ -4,3 +4,4 @@
 ASEngine/ASConfig.php
 documentation
 .php_cs.cache
+.vscode/settings.json
