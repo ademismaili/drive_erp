@@ -165,13 +165,6 @@ app('register')->botProtection();
                                 </form>
                             </div>
                             <!-- end: Forgot Password Form -->
-
-                            <?php if (FACEBOOK_ENABLED || TWITTER_ENABLED || GOOGLE_ENABLED) : ?>
-                                <small class="text-center text-muted mt-3 d-block">
-                                    <?= trans('or_connect_with') ?>
-                                </small>
-
-                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

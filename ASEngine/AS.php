@@ -1,6 +1,8 @@
 <?php
 
 define('AS_VERSION', '4.0.0');
+define("DEFAULT_LANGUAGE", "de");
+
 
 // Debug Mode
 // DON'T FORGET TO SET IT TO FALSE FOR PRODUCTION!
@@ -98,6 +100,8 @@ $container['current_user'] = function ($c) {
         'role_id' => (int)$result['user_role'],
         'phone' => $result['phone'],
         'address' => $result['address'],
+        'zip' => $result['zip'],
+        'city' => $result['city'],
         'is_banned' => $result['banned'] == 'Y',
         'is_admin' => strtolower($result['role']) === 'admin',
         'last_login' => $result['last_login']
