@@ -5,6 +5,7 @@ include 'templates/header.php';
 $comments = app('comment')->getComments();
 ?>
         
+        
 <div class="row">
     <?php
         // Include sidebar template
