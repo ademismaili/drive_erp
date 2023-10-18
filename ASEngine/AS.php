@@ -1,8 +1,6 @@
 <?php
 
 define('AS_VERSION', '4.0.0');
-define("DEFAULT_LANGUAGE", "de");
-
 
 // Debug Mode
 // DON'T FORGET TO SET IT TO FALSE FOR PRODUCTION!
