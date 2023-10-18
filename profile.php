@@ -95,6 +95,26 @@ $currentUser = app('current_user');
                     <!-- Text input-->
                     <div class="mb-3">
                         <label>
+                            <?= trans('zip'); ?>
+                        </label>
+                        <input name="zip" type="text"
+                               value="<?= e($currentUser->zip); ?>"
+                               class="form-control">
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="mb-3">
+                        <label>
+                            <?= trans('city'); ?>
+                        </label>
+                        <input name="city" type="city"
+                               value="<?= e($currentUser->city); ?>"
+                               class="form-control">
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="mb-3">
+                        <label>
                             <?= trans('phone'); ?>
                         </label>
                         <input name="phone" type="text"

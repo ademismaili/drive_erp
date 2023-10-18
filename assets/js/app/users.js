@@ -102,6 +102,9 @@ function getUserFormData(form) {
             first_name: form['first_name'].value,
             last_name: form['last_name'].value,
             address: form['address'].value,
+            zip: form['zip'].value,
+            city: form['city'].value,
+
             phone: form['phone'].value
         }
     };
@@ -136,6 +139,9 @@ $(".edit-user").click(function () {
         $(form['first_name']).val(res.first_name);
         $(form['last_name']).val(res.last_name);
         $(form['address']).val(res.address);
+        $(form['zip']).val(res.zip);
+        $(form['city']).val(res.city);
+
         $(form['phone']).val(res.phone);
 
         $(form['password']).attr('placeholder', $_lang.leave_blank);
@@ -172,6 +178,8 @@ $(".user-details").click(function () {
         $("#modal-details--first-name").text(res.first_name);
         $("#modal-details--last-name").text(res.last_name);
         $("#modal-details--address").text(res.address);
+        $("#modal-details--zip").text(res.zip);
+        $("#modal-details--city").text(res.city);
         $("#modal-details--phone").text(res.phone);
         $("#modal-details--last-login").text(res.last_login);
 

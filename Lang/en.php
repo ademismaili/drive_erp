@@ -70,6 +70,10 @@ return array(
 
     "address" => "Address",
 
+    "zip" => "Zip",
+
+    "city" => "City",
+
     "first_name" => "First Name",
 
     "last_name" => "Last Name",
