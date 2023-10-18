@@ -160,6 +160,10 @@ $roles = app('db')->select("SELECT * FROM `as_user_roles` WHERE `role_id` != '3'
                             <dd id="modal-details--last-name"></dd>
                             <dt title="<?= trans('address') ?>"><?= trans('address') ?></dt>
                             <dd id="modal-details--address"></dd>
+                            <dt title="<?= trans('zip') ?>"><?= trans('zip') ?></dt>
+                            <dd id="modal-details--zip"></dd>
+                            <dt title="<?= trans('city') ?>"><?= trans('city') ?></dt>
+                            <dd id="modal-details--cits"></dd>
                             <dt title="<?= trans('phone') ?>"><?= trans('phone') ?></dt>
                             <dd id="modal-details--phone"></dd>
                             <dt title="<?= trans('last_login') ?>"><?= trans('last_login') ?></dt>
@@ -274,6 +278,20 @@ $roles = app('db')->select("SELECT * FROM `as_user_roles` WHERE `role_id` != '3'
                                     <?= trans('address'); ?>
                                 </label>
                                 <input name="address" type="text" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label>
+                                    <?= trans('zip'); ?>
+                                </label>
+                                <input name="zip" type="text" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label>
+                                    <?= trans('city'); ?>
+                                </label>
+                                <input name="city" type="text" class="form-control">
                             </div>
 
                             <div class="mb-3">

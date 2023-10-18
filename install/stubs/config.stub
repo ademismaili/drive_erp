@@ -49,25 +49,3 @@ define('SMTP_ENCRYPTION', "");
 
 define('MAIL_FROM_NAME', "{{website_name}}");
 define('MAIL_FROM_EMAIL', "{{noreply_email}}");
-
-// SOCIAL LOGIN CONFIGURATION
-
-define('SOCIAL_CALLBACK_URI', "{{script_url}}socialauth_callback.php");
-
-// GOOGLE
-define('GOOGLE_ENABLED', false);
-define('GOOGLE_ID', "");
-define('GOOGLE_SECRET', "");
-
-// FACEBOOK
-define('FACEBOOK_ENABLED', false);
-define('FACEBOOK_ID', "");
-define('FACEBOOK_SECRET', "");
-
-// TWITTER
-define('TWITTER_ENABLED', false);
-define('TWITTER_KEY', "");
-define('TWITTER_SECRET', "");
-
-// TRANSLATION
-define('DEFAULT_LANGUAGE', 'en');

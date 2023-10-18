@@ -299,7 +299,7 @@ class ASUser
         );
 
         if (count($result) == 0) {
-            return ["first_name" => "", "last_name" => "", "address" => "", "phone" => "", "empty" => true];
+            return ["first_name" => "", "last_name" => "", "address" => "", "zip" => "", "city" => "", "phone" => "", "empty" => true];
         }
 
         return $result[0];
