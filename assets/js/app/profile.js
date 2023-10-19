@@ -51,6 +51,8 @@ $("#update_details").click(function () {
             first_name: form['first_name'].value,
             last_name: form['last_name'].value,
             address: form['address'].value,
+            address: form['zip'].value,
+            address: form['city'].value,
             phone: form['phone'].value
         }
     }, function () {
