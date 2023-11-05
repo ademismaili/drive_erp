@@ -1,9 +1,11 @@
 <?php
 // Konfigurationsdaten für die Datenbankverbindung
-$servername = "localhost";
-$username = "adem.ismaili_adem";
-$password = "_y}l*ogtA2)qb9lY";
-$dbname = "adem.ismaili_adem";
+include_once '/home/adem.ismaili/web/adem.6it.ch/public_html/drive_erp/ASEngine/ASConfig.php';
+
+$servername = DB_HOST;
+$username = DB_USER;
+$password = DB_PASS;
+$dbname = DB_NAME;
 
 // Datenbankverbindung herstellen
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,6 +14,8 @@ $conn->set_charset("utf8mb4");
 // Prüfen, ob die Verbindung erfolgreich hergestellt wurde
 if ($conn->connect_error) {
     die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
+}    else {
+        echo "Verbindung zur Datenbank erfolgreich hergestellt." . PHP_EOL;
 }
 
 // URL zur herunterzuladenden Textdatei
@@ -23,12 +27,15 @@ $temp_file = tempnam(sys_get_temp_dir(), 'downloaded_file');
 // Datei herunterladen und in die temporäre Datei schreiben
 $ch = curl_init($file_url);
 $temp_file_handle = fopen($temp_file, 'w');
+echo "Datei herunterladen..." . PHP_EOL;
 
 
 curl_setopt($ch, CURLOPT_FILE, $temp_file_handle);
 
 if (curl_exec($ch) === false) {
     die("Fehler beim Herunterladen der Datei: " . curl_error($ch));
+} else {
+    echo "Datei erfolgreich heruntergeladen." . PHP_EOL;
 }
 
 curl_close($ch);
@@ -59,7 +66,7 @@ if ($handle) {
                 $column_mapping[$source_column] = $destination_column;
             } else {
                 // Spalte nicht gefunden, Meldung ausgeben mit Zeilenumbruch
-                echo "Spalte '$source_column' wurde in der Eingabedatei nicht gefunden. Mapping übersprungen.<br>";
+                echo "Spalte '$source_column' wurde in der Eingabedatei nicht gefunden. Mapping übersprungen" . PHP_EOL;
             }
         }
     }
