@@ -98,8 +98,8 @@ $container['current_user'] = function ($c) {
         'role_id' => (int)$result['user_role'],
         'phone' => $result['phone'],
         'address' => $result['address'],
-        'zip' => $result['zip'],
-        'city' => $result['city'],
+        'zip' => isset($result['zip']) ? $result['zip'] : null,
+        'city' => isset($result['city']) ? $result['city'] : null,
         'is_banned' => $result['banned'] == 'Y',
         'is_admin' => strtolower($result['role']) === 'admin',
         'last_login' => $result['last_login']
